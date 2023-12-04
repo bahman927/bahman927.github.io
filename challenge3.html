@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+</head>
+<body>
+  <form>
+    <h2>Password Generator</h2>
+    
+    <h4>Please select the combination of your Password</h4>
+     <input type="radio"  id="uppercase">
+     <label for="Uppercase"> Uppercase</label><br>
+     <input type="radio"  id="number">
+     <label for="Number"> Number</label><br>
+     <input type="radio"  id="special">
+     <label for="Spcial Character"> Special Character</label><br>
+     <br>
+     <h5> Please Enter the length of Your Password (8-128 digit)</h5>
+    <p>
+    <!-- <input type="text" id="text"> -->
+    <input type="number" id="myText"></input><br><br>
+    <button  type="button" onclick="myFunction()">Generate Password</button>
+    </p>
+     <p id = "my"></p>
+
+  </form>
+  <script> src='script.js'</script>
+
+</body>
+</html>
+
+ 
+
