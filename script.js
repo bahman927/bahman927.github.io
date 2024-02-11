@@ -1,4 +1,4 @@
- 
+let generateBtn = document.getElementById('generate') 
     function myFunction(){
 
       var upper_checked = document.getElementById("uppercase").checked;
@@ -37,7 +37,7 @@
               
     }
      
-  
+generateBtn.addEventListener('click', myFunction)
 
  
 
