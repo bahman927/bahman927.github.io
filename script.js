@@ -25,9 +25,6 @@ let generateBtn = document.getElementById('generate')
     all_character += special;  
   }
 
-  console.log(all_character);
-
-
  while (counter < passwordLength){
    password += all_character.charAt(Math.floor(Math.random() * all_character.length));
    counter++;
