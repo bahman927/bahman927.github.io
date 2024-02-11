@@ -34,6 +34,7 @@ let generateBtn = document.getElementById('generate')
  }    
 
  alert("Generated Password is : "+ password)
+document.getElementById('my').innerHTML=password
               
     }
      
