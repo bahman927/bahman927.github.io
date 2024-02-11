@@ -17,7 +17,7 @@ Files
 index.html: Contains the HTML code for the password generator form.
 script.js: Contains the JavaScript code to handle the generation of passwords based on user input.
 Development
-This project was created as a simple demonstration of a password generator using HTML and JavaScript. Feel free to modify and extend it as needed for your own purposes.
+This project was created as a simple demonstration of a password generator using HTML and JavaScript. 
 
 Author
 This project was created by Bahman(Gholamhossein) Dorandish.
