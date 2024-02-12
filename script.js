@@ -6,7 +6,7 @@ let generateBtn = document.getElementById('generate')
       var special_checked = document.getElementById("special").checked;
 
       var x = document.getElementById("myText").value;
-      var all_character = "abcdefghijklmnopqrstuvwxyz";
+      var charset = "abcdefghijklmnopqrstuvwxyz";
       
       var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
       var number = "0123456789";
@@ -16,22 +16,42 @@ let generateBtn = document.getElementById('generate')
       var counter = 0;
 
  if (upper_checked) {
-    all_character += upper;  
+    charset += upper;  
   }
  if (number_checked) {
-    all_character += number;  
+    charset += number;  
   }
  if (special_checked) {
-    all_character += special;  
+    charset += special;  
   }
-
- while (counter < passwordLength){
-   password += all_character.charAt(Math.floor(Math.random() * all_character.length));
-   counter++;
- }    
-
+  function containsUppercase(str) {
+    return /[A-Z]/.test(str);
+  }
+  
+  function containsNumber(str) {
+    return /\d/.test(str);
+  }
+  
+  function containsSpecialCharacter(str) {
+    // Special characters include anything that is not a letter or a number
+    return /[^\w\s]/.test(str);
+  }
+   
+loop = true;
+while (loop){
+  password = ""
+  for (let i = 0; i < passwordLength; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset[randomIndex];
+  }
+  
+  if ((upper_checked) && !containsUppercase(password)){continue;}
+  if ((number_checked) && !containsNumber(password)){continue;}
+  if ((special_checked) && !containsSpecialCharacter(password)){continue;}
+  loop = false;
+}
  alert("Generated Password is : "+ password)
-document.getElementById('my').innerHTML=password
+//document.getElementById('my').innerHTML=password
               
     }
      
